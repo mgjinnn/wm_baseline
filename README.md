@@ -1,4 +1,7 @@
 # Baseline
+
+简体中文 | [English](README_en.md)
+
 用法：
 ```bash
 bash run.sh

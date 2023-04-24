@@ -75,5 +75,3 @@ if __name__ == "__main__":
 
     process_encode()
     process_attack()
-
-    # np.load('', allow_pickle=True).item()

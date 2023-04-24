@@ -1,0 +1,7 @@
+ffmpeg
+ffmpeg-python
+ffmpeg-quality-metrics
+numpy
+opencv-python
+PyWavelets
+tqdm

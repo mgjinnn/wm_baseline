@@ -27,11 +27,11 @@ baseline：<br/>
 
 
 ## 数据下载链接
-[百度云链接:](https://pan.baidu.com/s/1GK_VcBCYZbgLFtUeRbmHbQ)  <br/>
-提取码: 0fm7 <br/>
+[百度云链接:](https://pan.baidu.com/s/1jIoJLVm0-KETthXIApqLAA) https://pan.baidu.com/s/1jIoJLVm0-KETthXIApqLAA  <br/>
+提取码: fdit <br/>
 
 
-资源配置：<br/>
+## 资源配置：<br/>
 CPU: 12vCPU <br/>
 内存: 24 GiB <br/>
 GPU: Nvidia RTX 3090  24G *1  Driver Version: 470.82.01 <br/>

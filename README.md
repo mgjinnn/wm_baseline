@@ -38,6 +38,20 @@ GPU: Nvidia RTX 3090  24G *1  Driver Version: 470.82.01 <br/>
 <br/>
 
 
+## 阿里云镜像仓库使用实例:<br/>
+1) 注册阿里云账户: https://cr.console.aliyun.com/cn-hangzhou/instances. <br/>
+2) 在工作台搜索[容器镜像服务], 进入后选择[个人实例]. <br/>
+3) 创建镜像仓库、命名空间, 设置仓库名称，选择公开或私有仓库(此处选择公开),  选择本地仓库. <br/>
+4) 本地登录阿里云Docker Registry示例: <br/>
+```bash
+$ docker login --username=[阿里云id] registry.cn-hangzhou.aliyuncs.com
+$ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
+$ docker push registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
+```
+5) 在比赛提交页面提交: registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号].
+<br/>
+
+
 ## Reference <br/>
 This baseline is mainly inspired by [guofei9987/blind_watermark](https://github.com/guofei9987/blind_watermark).
 <br/>

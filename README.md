@@ -48,7 +48,7 @@ $ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本�
 $ docker push registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
 请根据实际镜像信息替换示例中的[阿里云id], [ImageId]和[镜像版本号]参数.
 ```
-请根据实际镜像信息替换示例中的[阿里云id], [ImageId]和[镜像版本号]参数.
+
 5) 在比赛提交页面提交: registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号].
 <br/>
 

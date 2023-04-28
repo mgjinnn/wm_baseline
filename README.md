@@ -14,7 +14,7 @@ baseline：<br/>
 
 
 ## 参赛规范 <br/>
-1) 工程开发目录需要在/workspace/wm_baseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中main.py和evaluate.py. evaluate.py需保持和baseline一致. <br/>
+1) 工程开发目录需要在/workspace/wm_baseline/目录下, 启动脚本固定使用run.sh, 提交镜像中需使用baseline中main.py和evaluate.py. evaluate.py和attacks.py需保持和baseline一致. <br/>
 2) 请勿在水印提取阶段直接读取以及返回wms.npy中水印，应通过开发水印提取算法提取植入视频中的水印。如果在方案中直接读取返回wms.npy中水印，则成绩无效，且取消参赛资格.<br/>
 3) 提交方案中请合理安排日志打印输出内容，输出关键信息即可.<br/>
 4) 平台提供了基于镜像地址提交镜像的方式, 将本地镜像推送至阿里云容器镜像仓库或者Dockerhub后, 设置为公开镜像, 在比赛平台提交页面中输入镜像地址. 由比赛平台拉取镜像运行, 运行结束即可在成绩页面查询评测结果. 推送至阿里云容器镜像仓库或者Dockerhub时, 镜像仓库名称尽量不关联上比赛相关的词语, 以免被检索从而泄漏.<br/>
@@ -48,7 +48,6 @@ $ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本�
 $ docker push registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号]
 请根据实际镜像信息替换示例中的[阿里云id], [ImageId]和[镜像版本号]参数.
 ```
-
 5) 在比赛提交页面提交: registry.cn-hangzhou.aliyuncs.com/xx1/xx2:[镜像版本号].
 <br/>
 

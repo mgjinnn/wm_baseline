@@ -37,6 +37,19 @@ GPU: Nvidia RTX 3090 Driver Version: 470.82.01. The usage of GPU memory is limit
 <br/>
 
 
+## Alibaba Cloud Docker Registry(Recommend):<br/>
+1. Create Your Account and select individual account: https://cr.console.aliyun.com/ap-southeast-1/instances.<br/>
+2. select [Instance of Personal Edition] and select [Create ACR Personal Edition].<br/>
+3. select [Create Repository]. Create Namespace and Repository Name, and select Public Repository type, and choose [Local Repository].<br/>
+4. Log in to Alibaba Cloud Docker Registry Locally:<br/>
+```bash
+$ docker login --username=[accountId] registry-intl.ap-southeast-1.aliyuncs.com
+$ docker tag [ImageId] registry-intl.ap-southeast-1.aliyuncs.com/[namespace]/[repositoryName]:[tag]
+$ docker push registry-intl.ap-southeast-1.aliyuncs.com/[namespace]/[repositoryName]:[tag]
+Please replace the [accountId], [namespace], [repositoryName], [ImageId] and [tag] parameters based on your image.
+```
+5. submit your image: registry-intl.ap-southeast-1.aliyuncs.com/[namespace]/[repositoryName]:[tag].<br/>
+
 ## Reference <br/>
 This baseline is mainly inspired by [guofei9987/blind_watermark](https://github.com/guofei9987/blind_watermark).
 <br/>

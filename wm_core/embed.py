@@ -3,6 +3,7 @@ import cv2
 import heapq
 import multiprocessing
 import numpy as np
+import os
 import time
 
 from cv2 import dct, idct
@@ -15,6 +16,12 @@ class Encoder:
 
     def __init__(self):
         pass
+
+    def embed_videos(self, embedded_folder, videos, wms):
+        for video_path in videos:
+            video_name = video_path.split('/')[-1].split('.')[0]
+            embedded_video_path = os.path.join(embedded_folder, f'{video_name}.mp4')
+            self.embed_video(wms[video_name], video_path, embedded_video_path, threads=12)
 
     def embed_video(self, wm, video_path, output_path, threads=None):
         ts = time.time()

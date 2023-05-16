@@ -1,6 +1,7 @@
 import cv2
 import ffmpeg
 import numpy as np
+import time
 
 from cv2 import dct, idct
 from numpy.linalg import svd
@@ -53,7 +54,7 @@ class Decoder:
 
         return one_dim_kmeans(wm_avg)
 
-    def detect_video(self, wmed_video_path, ori_wm, ori_frame_size=(720, 1280)):
+    def detect_video(self, wmed_video_path, ori_wm):
         ori_wm = np.array(ori_wm)
         wmed_cap = cv2.VideoCapture(wmed_video_path)
         frames_len = int(wmed_cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -80,6 +81,25 @@ class Decoder:
         avg_bar = sum(bar_list) / len(bar_list)
         return frames_len, round(avg_bar, 4)
 
+    def detect_videos(self, videos, wms_dict):
+        bar_list = []
+        extract_fps_list = []
+        
+        for video_path in videos:
+            raw_video_name = video_path.split('/')[-1].split('.')[0]
+            ts = time.time()
+
+            # Replace your extraction method, 
+            # but the function name and return remain the same as baseline.
+            attacked_frames, vid_bar = self.detect_video(video_path, wms_dict[raw_video_name])
+            bar_list.append(vid_bar)
+            extract_fps_list.append(attacked_frames / (time.time()-ts))
+        
+        avg_extract_fps = round(sum(extract_fps_list) / len(extract_fps_list), 4)
+
+        return bar_list, avg_extract_fps
+
+
 def one_dim_kmeans(inputs):
     threshold = 0
     e_tol = 10 ** (-6)
@@ -98,3 +118,4 @@ def one_dim_kmeans(inputs):
 def bar_cal(input_wm, output_wm):
     a = round(np.sum(np.equal(output_wm, input_wm)), 3)
     return a/256
+

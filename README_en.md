@@ -13,9 +13,11 @@ baseline：<br/>
 3) It is developed based on the Linux system, so it is best to test it in the Linux environment. <br/>
 
 docker: <br/>
+```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
 docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
 docker exec -it [CONTAINER ID] bash <br/>
+```
 
 ## Challenge Specifications<br/>
 1) The project development directory needs to be in the /workspace/wm_baseline/ directory, the startup script always uses run.sh, and the main.py and evaluate.py in the baseline need to be used when submitting the Docker image.<br/>

@@ -13,9 +13,11 @@ baseline：<br/>
 3) 基于Linux系统开发，最好在Linux环境下测试。<br/>
 
 docker: <br/>
+```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
 docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
 docker exec -it [CONTAINER ID] bash <br/>
+```
 
 ## baseline更新 <br/>
 20230516: 调整main.py, evaluate.py，wm_core/embed.py, wm_core/extract.py. 方便参赛者需要并行处理视频以及更改水印生成的方式。

@@ -44,7 +44,7 @@ docker exec -it [CONTAINER ID] bash
 ## 资源配置：<br/>
 CPU: 12vCPU <br/>
 内存: 24 GiB <br/>
-GPU: Nvidia RTX 3090  24G *1  Driver Version: 470.82.01 <br/>
+GPU: Nvidia RTX 3090, Driver Version: 470.82.01, 显存开销在16G以内 <br/>
 <br/>
 
 

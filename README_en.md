@@ -14,9 +14,9 @@ baseline：<br/>
 
 docker: <br/>
 ```bash
-docker pull registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
-docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1 <br/>
-docker exec -it [CONTAINER ID] bash <br/>
+docker pull registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1
+docker run -it -d --cpus=12 -m 24g -v /src:/tar registry.cn-hangzhou.aliyuncs.com/mg_test/wm_baseline:v1
+docker exec -it [CONTAINER ID] bash
 ```
 
 ## Challenge Specifications<br/>
